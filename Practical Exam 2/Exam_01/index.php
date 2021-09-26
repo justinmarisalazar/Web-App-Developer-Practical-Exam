@@ -5,7 +5,7 @@
 	<form method="post" autocomplete="off">
 		<h2>Enter a word:</h2>
 		<input type="text" name="word">
-		<input type="submit" value="Submit">
+		<input type="submit" value="Submit" name="submit">
 	</form>
 	
 	<?php
