@@ -21,6 +21,7 @@
 				return false;
 		}
 		
+		// Checks if the submit button is clicked
 		if(isset($_POST["submit"]))
 		{
 			$word = $_POST["word"]; // Imports value from the form
