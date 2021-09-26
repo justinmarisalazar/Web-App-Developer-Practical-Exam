@@ -12,8 +12,6 @@
 		// Create a function that checks if an input string is a palindrome. A palindrome is a word,
 		// phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
 	
-		$word = $_POST['word']; // Imports value from the form
-		
 		// Function that checks if the input is a palindrome
 		function isPalindrome($word)
 		{
@@ -23,15 +21,20 @@
 				return false;
 		}
 		
-		$origWord = $word; // Stores the original input in a variable
-		$word = str_replace(' ', '', $word); // Removes the spaces from the input
-		$word = str_replace('\'', '', $word); // Removes the apostrophes from the input
-		
-		// Prints if the input is a palindrome or not
-		if(isPalindrome($word))
-			echo "<h3>$origWord is a palindrome.</h3>";
-		else
-			echo "<h3>$origWord is not a palindrome.</h3>";
+		if(isset($_POST["submit"]))
+		{
+			$word = $_POST["word"]; // Imports value from the form
+			
+			$origWord = $word; // Stores the original input in a variable
+			$word = str_replace(' ', '', $word); // Removes the spaces from the input
+			$word = str_replace('\'', '', $word); // Removes the apostrophes from the input
+			
+			// Prints if the input is a palindrome or not
+			if(isPalindrome($word))
+				echo "<h3>$origWord is a palindrome.</h3>";
+			else
+				echo "<h3>$origWord is not a palindrome.</h3>";
+		}
 	?>
 </body>
 </html>
